@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>index.html</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--tx:#1b2430;--mu:#5d6b7c;--bd:#d9dee5;--ac:#1f7ae0;--bad:#d64545;--mid:#e0a020;--ok:#2a9d5c;--floor:#eef1f5;--desk:#c9b48f;--bench:#b9c3d0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12161c;--card:#1a2029;--tx:#e8edf3;--mu:#9aa7b6;--bd:#2c3542;--ac:#5aa2ff;--floor:#202733;--desk:#7a6a4d;--bench:#3b4656}}
+:root[data-theme="dark"]{--bg:#12161c;--card:#1a2029;--tx:#e8edf3;--mu:#9aa7b6;--bd:#2c3542;--ac:#5aa2ff;--floor:#202733;--desk:#7a6a4d;--bench:#3b4656}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:16px}
+.w{max-width:960px;margin:0 auto}h1{font-size:20px;margin:0 0 4px}p.s{margin:0 0 12px;color:var(--mu)}
+.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+button{background:var(--ac);color:#fff;border:0;border-radius:8px;padding:9px 16px;font-size:15px;cursor:pointer}
+select{padding:8px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font-size:15px}
+#st{font-weight:600}canvas{width:100%;height:auto;background:var(--floor);border:1px solid var(--bd);border-radius:10px;display:block}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;margin-top:14px}
+.ov{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--bd);text-align:right}th:first-child,td:first-child{text-align:left}
+.b{height:12px;border-radius:4px;margin:2px 0}.lg{color:var(--mu);font-size:13px;margin-top:8px}
+:root{--bg:#f2f4f8;--card:#fff;--tx:#0f1b2d;--mu:#5a6a80;--bd:#dce2ea;--ac:#1d4ed8;--bad:#c93b3b;--mid:#d98a0b;--ok:#16875a;--floor:#f7f9fc;--desk:#d2bd94;--bench:#cfd8e4;--sh:0 1px 2px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.06)}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b111b;--card:#121a27;--tx:#e7edf6;--mu:#8d9bb0;--bd:#243247;--ac:#6ea0ff;--floor:#0f1622;--desk:#7d6c4e;--bench:#2e3b50;--sh:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}}:root[data-theme="dark"]{--bg:#0b111b;--card:#121a27;--tx:#e7edf6;--mu:#8d9bb0;--bd:#243247;--ac:#6ea0ff;--floor:#0f1622;--desk:#7d6c4e;--bench:#2e3b50;--sh:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;padding:28px 16px 40px;-webkit-font-smoothing:antialiased}.w{max-width:1040px}.hd{margin-bottom:18px}.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ac);margin-bottom:6px}h1{font-size:28px;font-weight:700;letter-spacing:-.02em;margin:0 0 6px}p.s{max-width:680px;margin:0;font-size:14.5px}.bar{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px 16px;box-shadow:var(--sh);margin-bottom:14px;gap:14px}.bar label{font-size:13px;font-weight:500;color:var(--mu);display:flex;align-items:center;gap:8px}select{padding:8px 12px;font:inherit;font-size:14px}button{padding:10px 20px;font:inherit;font-size:14px;font-weight:600;transition:filter .15s}button:hover{filter:brightness(1.1)}button:focus-visible,select:focus-visible{outline:2px solid var(--ac);outline-offset:2px}#st{margin-left:auto;font-size:13px;font-weight:500;color:var(--mu);background:var(--floor);border:1px solid var(--bd);border-radius:999px;padding:6px 14px}.cv{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px;box-shadow:var(--sh)}canvas{border:0;border-radius:10px}.leg{display:flex;flex-wrap:wrap;gap:6px 18px;padding:10px 6px 2px;font-size:12.5px;color:var(--mu)}.leg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}.card{border-radius:14px;padding:22px;box-shadow:var(--sh);margin-top:18px}.card h2{font-size:18px;margin:0}.sub{margin:2px 0 14px;color:var(--mu);font-size:13px}.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:16px}.kp div{border:1px solid var(--bd);border-radius:10px;padding:12px 14px;background:var(--floor)}.kp span{display:block;font-size:11.5px;color:var(--mu);text-transform:uppercase;letter-spacing:.05em}.kp b{display:block;font-size:14px;margin:4px 0 2px}.kp em{font-style:normal;font-size:20px;font-weight:700;color:var(--ac)}table{font-size:13.5px;font-variant-numeric:tabular-nums}th{font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--mu);font-weight:600;border-bottom:2px solid var(--bd)}tr:last-child td{border-bottom:0}tr:hover td{background:var(--floor)}.b{height:8px;border-radius:99px;margin:10px 0 3px}.lg{font-size:12.5px;line-height:1.6}.prem{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;margin-top:18px}.hd{border-left:4px solid var(--ac);padding-left:16px}#st::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:8px}.cvh{display:flex;justify-content:space-between;align-items:baseline;padding:4px 6px 10px;font-size:14px}.cvh span{font-size:12px;color:var(--mu)}.ov{border:1px solid var(--bd);border-radius:10px}@media (max-width:600px){h1{font-size:23px}#st{margin-left:0}.cvh span{display:none}}</style></head><body><div class="w">
+<header class="hd"><div class="eyebrow">Análise de rede sem fio · 2,4 GHz</div><h1>Laboratório de informática</h1>
+<p class="s">Efeito da altura do roteador, da co-interferência e da parede de concreto na velocidade da rede. Modelo simplificado de propagação: ilustrativo, não é medição real.</p></header>
+<div class="bar"><label>Canal Wi-Fi: <select id="ch"><option value="1">1 (2412 MHz)</option><option value="6">6 (2437 MHz)</option><option value="11" selected>11 (2462 MHz)</option></select></label><button id="go">Iniciar simulação</button><span id="st">Pronto</span></div>
+<div class="cv"><div class="cvh"><b>Planta do laboratório</b><span>Vista superior · escala aproximada</span></div><canvas id="c" width="700" height="680"></canvas><div class="leg"><span><i style="background:#1f7ae0"></i>Roteador A</span><span><i style="background:#e68a1e"></i>Roteador B</span><span><i style="background:#8c50c8"></i>Roteador C</span><span><i style="background:var(--ok)"></i>Acima de 35 Mb/s</span><span><i style="background:var(--mid)"></i>15 a 35 Mb/s</span><span><i style="background:var(--bad)"></i>Abaixo de 15 Mb/s</span></div></div>
+<div class="card" id="res" style="display:none"></div>
+<p class="lg prem"><b>Premissas.</b> lab de ~10 × 8 m com 6 bancadas (3 à esquerda e 3 à direita, 3 computadores cada) e 6 alunos no total: 2 na primeira bancada da esquerda e 4 na última bancada da direita. As demais bancadas ficam vazias. Mesa do professor (um pouco menor) à esquerda, em frente à primeira bancada, afastada da parede, com o roteador A. Cenário 1: A baixo (0,75 m) e depois alto (2,6 m). Cenário 2: roteador B, na mesma sala e no mesmo canal, também ligado. Cenário 3: só o roteador C, em outro laboratório que divide com a sala a parede frontal de concreto, atrás dela (hipótese de ~20 dB de perda). Redes vizinhas por canal (hipótese): canal 1: 4, canal 6: 7, canal 11: 2, cada uma reduzindo ~4,5% da velocidade. Cada celular baixa por 10 s.</p>
+</div>
+<script>
+const cv=document.getElementById('c'),x=cv.getContext('2d'),st=document.getElementById('st'),chs=document.getElementById('ch');
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const PX=70,PHS=['low','raise','high','ab','c'],DU={low:9,raise:3,high:9,ab:9,c:9};
+const CH={1:{f:2412,nb:4},6:{f:2437,nb:7},11:{f:2462,nb:2}};
+const R={A:{x:200,y:185},B:{x:640,y:140},C:{x:350,y:-32,h:1.8,w:1}};
+const ph=[];let seed=7;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const BX=[100,400],BY=[220,335,450];
+for(let r=0;r<3;r++)for(let c=0;c<2;c++){const n=(r==0&&c==0)?2:(r==2&&c==1)?4:0;for(let k=0;k<n;k++)ph.push({x:BX[c]+200*(k+.5)/n,y:BY[r]+46,row:r,c,n:.9+rnd()*.2})}
+function rss(Q,h,p){const dx=(p.x-Q.x)/PX,dy=(p.y-Q.y)/PX,dz=h-.75,d=Math.max(1,Math.hypot(dx,dy,dz));
+const ob=Q.w?20+p.row*3:(h<1.2?(p.row+1)*4+6:p.row+2);return -40-32*Math.log10(d)-ob}
+const sp=r=>Math.max(1,Math.min(60,(r+92)/47*60));
+function calc(sc,ch){const nb=CH[ch].nb;return ph.map(p=>{let ap='A',r,f=1,pg=0;
+if(sc==='c'){ap='C';r=rss(R.C,R.C.h,p)}else{const h=sc==='low'?.75:2.6,a=rss(R.A,h,p);r=a;
+if(sc==='ab'){const b=rss(R.B,2.6,p);ap=b>a?'B':'A';r=Math.max(a,b);const pw=Math.pow(10,(Math.min(a,b)-r)/10);f=.55/(1+pw*1.5);pg=(1-f)*60}}
+const d=sp(r)*p.n*f*(1-.045*nb);return{ap,rssi:Math.round(r),down:+d.toFixed(1),up:+(d*.7).toFixed(1),ping:Math.round(12+(-r-50)*1.3+nb*2+pg),mb:Math.round(d*10/8)}})}
+let S={on:0,h:.75};
+document.getElementById('go').onclick=()=>{const ch=+chs.value;S={on:1,i:0,t0:performance.now()/1e3,ch,h:.75,r:{low:calc('low',ch),high:calc('high',ch),ab:calc('ab',ch),c:calc('c',ch)}};document.getElementById('res').style.display='none'};
+const col=v=>v<15?css('--bad'):v<35?css('--mid'):css('--ok');
+function rect(a,b,w,h,f,s){x.fillStyle=f;x.fillRect(a,b,w,h);if(s){x.strokeStyle=s;x.strokeRect(a,b,w,h)}}
+function rr(a,b,w,h,r,f,s){x.beginPath();x.roundRect(a,b,w,h,r);x.fillStyle=f;x.fill();if(s){x.strokeStyle=s;x.lineWidth=1;x.stroke()}}
+function txt(t,a,b,sz,c,al){x.font=sz+'px Inter,system-ui,sans-serif';x.fillStyle=c||css('--tx');x.textAlign=al||'center';x.fillText(t,a,b)}
+function wv(Q,c,mx,s,al,T){for(let i=0;i<4;i++){const rad=(T*s+i*mx/4)%mx;x.strokeStyle='rgba('+c+','+(1-rad/mx)*al+')';x.lineWidth=2;x.beginPath();x.arc(Q.x,Q.y,rad,0,7);x.stroke()}}
+function router(Q,n,c,on,below){x.globalAlpha=on?1:.3;x.strokeStyle=c;x.lineWidth=2;x.beginPath();x.moveTo(Q.x-9,Q.y-3);x.lineTo(Q.x-13,Q.y-15);x.moveTo(Q.x+9,Q.y-3);x.lineTo(Q.x+13,Q.y-15);x.stroke();x.fillStyle=c;x.beginPath();x.roundRect(Q.x-16,Q.y-4,32,11,3);x.fill();for(let i=0;i<3;i++){x.fillStyle=(Math.floor(performance.now()/250)+i)%3?'#fff':'#7f7';x.beginPath();x.arc(Q.x-8+i*8,Q.y+1.5,1.6,0,7);x.fill()}if(on){x.lineWidth=1.5;for(let k=1;k<=3;k++){x.globalAlpha=.25+.75*((Math.sin(performance.now()/300-k)+1)/2);x.beginPath();x.arc(Q.x,Q.y-12,k*5+4,-2.2,-.94);x.stroke()}x.globalAlpha=1}txt(n,Q.x,below?Q.y+24:Q.y-36,11,c);x.globalAlpha=1}
+const MSG={low:'Cenário 1: roteador A baixo (0,75 m)',raise:'Elevando o roteador A…',high:'Cenário 1: roteador A alto (2,6 m)',ab:'Cenário 2: roteador B ligado na mesma sala e no mesmo canal',c:'Cenário 3: só o roteador C, no outro laboratório, atrás da parede frontal de concreto'};
+function draw(now){const T=now/1e3;let tt=T-S.t0,k=null,p=null;
+if(S.on){p=PHS[S.i];if(p==='raise')S.h=.75+1.85*Math.min(1,tt/3);else k=p;if(p==='high'||p==='ab'||p==='c')S.h=2.6;
+if(tt>DU[p]){S.i++;S.t0=T;if(S.i>=PHS.length){S.on=0;S.done=1;finish()}}}
+if(S.done){k='c';p='c';tt=99}
+st.textContent=S.done?'Concluído: veja a comparação abaixo':S.on?MSG[p]:'Pronto';
+x.clearRect(0,0,700,680);x.save();x.strokeStyle=css('--bd');x.globalAlpha=.45;x.lineWidth=1;for(let g=35;g<700;g+=35){x.beginPath();x.moveTo(g,120);x.lineTo(g,680);x.stroke()}for(let g=120;g<680;g+=35){x.beginPath();x.moveTo(0,g);x.lineTo(700,g);x.stroke()}x.restore();
+// sala ao lado e parede
+rect(0,0,700,100,css('--card'));txt('OUTRO LABORATÓRIO · ATRÁS DA PAREDE FRONTAL',350,20,10.5,css('--mu'));
+x.globalAlpha=.4;rect(0,100,700,20,css('--mu'));x.globalAlpha=1;x.strokeStyle=css('--mu');x.lineWidth=1;for(let a=-20;a<700;a+=14){x.beginPath();x.moveTo(a,120);x.lineTo(a+20,100);x.stroke()}txt('PAREDE DE CONCRETO',350,114,10,css('--mu'));x.save();x.translate(0,120);
+// patch panel + cabo
+rr(8,20,70,56,6,css('--bench'),css('--bd'));for(let i=0;i<8;i++)rect(14+(i%4)*15,30+Math.floor(i/4)*12,10,7,Math.sin(T*6+i*1.7)>-.3?'#2a9d5c':'#143');txt('Patch panel',43,92,11,css('--mu'));
+x.strokeStyle=css('--mu');x.setLineDash([4,3]);x.beginPath();x.moveTo(78,48);x.lineTo(78,185);x.lineTo(135,185);x.stroke();x.setLineDash([]);for(let j=0;j<5;j++){const d=(T*90+j*88)%194;let a,b;if(d<137){a=78;b=48+d}else{a=78+(d-137);b=185}x.fillStyle='#2a9d5c';x.beginPath();x.arc(a,b,3,0,7);x.fill()};x.setLineDash([]);
+// mesa do professor e bancadas
+rr(135,168,130,34,6,css('--desk'),css('--bd'));rr(240,172,16,11,2,css('--tx'));txt('Mesa do professor',200,160,11,css('--mu'));
+for(let r=0;r<3;r++)for(let c=0;c<2;c++){rr(BX[c],BY[r],200,30,6,css('--bench'),css('--bd'));for(let j=0;j<3;j++){const mx=BX[c]+200*(j+.5)/3-10;rr(mx,BY[r]+2,20,13,2,css('--tx'));rr(mx+2,BY[r]+4,16,8,1,(S.on||S.done)?'hsl(210,70%,'+(40+15*Math.sin(T*3+j+r*2+c))+'%)':'#556');rect(mx+8,BY[r]+15,4,3,css('--tx'))}}
+// ondas
+const A=R.A,aOn=p!=='c';
+if(S.on||S.done){
+ x.save();x.beginPath();x.rect(0,0,700,560);x.clip();if(aOn){const mx=p==='low'?300:p==='raise'?300+320*(S.h-.75)/1.85:620;wv(A,'31,122,224',mx,p==='low'?55:110,p==='low'?.45:.7,T)}
+ if(p==='ab')wv(R.B,'230,130,30',620,110,.7,T);x.restore();
+ if(p==='c'){x.save();x.beginPath();x.rect(0,-120,700,100);x.clip();wv(R.C,'140,80,200',420,110,.7,T);x.restore();x.save();x.beginPath();x.rect(0,0,700,560);x.clip();wv(R.C,'140,80,200',420,110,.18,T);x.restore()}}
+router(A,'Roteador A','#1f7ae0',aOn,1);if(p==='ab')router(R.B,'Roteador B','#e68a1e',1);router(R.C,'Roteador C','#8c50c8',p==='c');
+// celulares
+ph.forEach((q,i)=>{const cT=.2+i*.1,tS=3;let s='off',v=0,r=k?S.r[k][i]:null;
+if(r){if(tt>=cT)s='conn';if(tt>=tS){s='test';v=r.down*Math.min(1,(tt-tS)/4)*(1+Math.sin(T*9+i)*.04)}if(tt>=tS+4)s='done',v=r.down}
+const bob=s==='test'?Math.sin(T*8+i)*1.5:0;x.fillStyle=css('--mu');x.globalAlpha=.65;x.beginPath();x.arc(q.x,q.y-3+bob,5,0,7);x.fill();x.beginPath();x.arc(q.x,q.y+11,9,Math.PI,0);x.fill();x.globalAlpha=1;
+const c=s==='off'?css('--mu'):s==='conn'?css('--ac'):col(v||1);rect(q.x+7,q.y-6,7,12,c,css('--tx'));
+if(r&&p==='ab'&&s!=='off')txt(r.ap,q.x,q.y-14,10,r.ap==='A'?'#1f7ae0':'#e68a1e');
+x.fillStyle=css('--mu');x.fillRect(q.x-8,q.y+12,16,3);if(r&&s!=='off'){const nb=r.rssi>-60?4:r.rssi>-70?3:r.rssi>-80?2:1;for(let b=0;b<4;b++)rect(q.x+17+b*3,q.y+4-b*3,2,b*3+2,b<nb?c:css('--bd'))}if(s==='test'||s==='conn'){const Q=R[r.ap],dc=r.ap==='A'?'31,122,224':r.ap==='B'?'230,130,30':'140,80,200';for(let j=0;j<3;j++){const u=(T*.9+i*.17+j/3)%1,al=r.ap==='C'?(u<.07?1:Math.max(0,1-(u-.07)*8)*.5):1;x.fillStyle='rgba('+dc+','+al*.9+')';x.beginPath();x.arc(Q.x+(q.x-Q.x)*u,Q.y+(q.y-Q.y)*u,2.5,0,7);x.fill()}}if(s==='test'||s==='done'){const pr=s==='done'?1:Math.min(1,(tt-tS)/4);txt(v.toFixed(0)+' Mb/s',q.x,q.y+32,10,c);txt(Math.round(r.mb*pr)+' MB',q.x,q.y+44,10,c)}});
+// vista lateral
+rr(300,8,200,120,8,css('--card'),css('--bd'));txt('Canal '+(S.ch||chs.value)+' · '+CH[S.ch||chs.value].f+' MHz',400,24,11,css('--mu'));
+x.strokeStyle=css('--mu');x.beginPath();x.moveTo(310,120);x.lineTo(490,120);x.stroke();rect(355,102,90,6,css('--desk'));rect(359,108,4,12,css('--desk'));rect(437,108,4,12,css('--desk'));
+const ry=102-(S.h-.75)/1.85*58-6,h0=S.on||S.done?S.h:.75;x.strokeStyle='#1f7ae0';x.beginPath();x.moveTo(400,102);x.lineTo(400,ry);x.stroke();x.fillStyle='#1f7ae0';x.beginPath();x.arc(400,ry,6,0,7);x.fill();
+txt('A: '+h0.toFixed(2).replace('.',',')+' m',460,60,12,'#1f7ae0');
+if(p==='ab'){txt('⚠ Co-interferência: A e B disputam o mesmo canal',400,150,12,css('--bad'));x.strokeStyle='rgba(214,69,69,.6)';x.setLineDash([5,4]);x.beginPath();x.moveTo(200,185);x.lineTo(640,140);x.stroke();x.setLineDash([]);x.fillStyle='rgba(214,69,69,'+(.25+.2*Math.sin(T*8))+')';x.beginPath();x.arc(420,162,14+5*Math.sin(T*8),0,7);x.fill();txt('!',420,168,15,css('--bad'))}
+if(p==='c'){x.fillStyle='rgba(214,69,69,'+(.3+.3*Math.sin(T*6))+')';x.fillRect(250,-20,200,20);txt('Concreto atenua o sinal (~20 dB)',520,-80,11,css('--bad'))}x.restore();
+requestAnimationFrame(draw)}
+const av=(a,k)=>a.reduce((s,v)=>s+v[k],0)/a.length,f1=n=>n.toFixed(1).replace('.',',');
+function finish(){const SC=[['low','1. Roteador A baixo (0,75 m)'],['high','1. Roteador A alto (2,6 m)'],['ab','2. A alto + B (mesmo canal)'],['c','3. Roteador C atrás da parede (concreto)']];
+const mx=Math.max(...SC.map(s=>av(S.r[s[0]],'down')));
+const rows=SC.map(([k,n])=>{const a=S.r[k];return '<tr><td>'+n+'</td><td>'+f1(av(a,'down'))+'</td><td>'+f1(av(a,'up'))+'</td><td>'+Math.round(av(a,'mb'))+'</td><td>'+a.reduce((s,v)=>s+v.mb,0)+'</td><td>'+Math.round(av(a,'rssi'))+'</td><td>'+Math.round(av(a,'ping'))+'</td><td>'+f1(Math.min(...a.map(v=>v.down)))+'</td></tr>'}).join('');
+const bars=SC.map(([k,n])=>{const d=av(S.r[k],'down');return '<div class="b" style="width:'+d/mx*100+'%;background:'+col(d)+'"></div><small>'+n+': '+f1(d)+' Mb/s</small>'}).join('');
+const sv=SC.map(([k,n])=>[n,av(S.r[k],'down')]).sort((a,b)=>b[1]-a[1]),kp='<div class="kp"><div><span>Melhor cenário</span><b>'+sv[0][0]+'</b><em>'+f1(sv[0][1])+' Mb/s</em></div><div><span>Pior cenário</span><b>'+sv[3][0]+'</b><em>'+f1(sv[3][1])+' Mb/s</em></div><div><span>Queda do melhor ao pior</span><b>Velocidade média</b><em>'+Math.round((1-sv[3][1]/sv[0][1])*100)+'%</em></div></div>';document.getElementById('res').innerHTML='<h2>Comparação dos cenários</h2><p class="sub">Média dos 6 alunos</p>'+kp+'<div class="ov"><table><tr><th></th><th>Download (Mb/s)</th><th>Upload (Mb/s)</th><th>MB em 10 s (média)</th><th>MB total da sala</th><th>Sinal (dBm)</th><th>Ping (ms)</th><th>Pior aluno (Mb/s)</th></tr>'+rows+'</table></div><div style="margin-top:10px">'+bars+'</div>'+
+'<p class="lg" style="margin-bottom:0">Leitura: elevar o roteador A reduz as barreiras (bancadas, monitores e pessoas). No cenário 2, dois roteadores no mesmo canal de 2,4 GHz precisam dividir o tempo de transmissão (CSMA/CA) e geram colisões e retransmissões, então a velocidade cai e o ping sobe mesmo com bom sinal. A solução é usar canais que não se sobrepõem (1, 6 e 11) ou reduzir a potência. No cenário 3, o roteador C está logo atrás da parede frontal, no outro laboratório, a poucos metros dos alunos, mas o concreto absorve boa parte do sinal; quem está mais longe da parede (fileira de trás) é o mais prejudicado. Os números de redes vizinhas e a perda da parede são hipóteses; meça com um analisador de Wi-Fi.</p>';
+document.getElementById('res').style.display='block'}
+requestAnimationFrame(draw);
+</script></body></html>
