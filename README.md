@@ -1,1 +1,0 @@
-#simulacao_pratica_tcc
